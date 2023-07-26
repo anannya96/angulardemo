@@ -1,0 +1,45 @@
+
+<div class="row">
+  <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+
+    <select class="form-select" aria-label="Default select example"
+    [(ngModel)]="pagedata.drop">
+        <option *ngFor="let i of data.drop">{{i.PROJECT_CODE}}</option>
+        
+      </select>
+  </div>
+
+<div class="col-12 text-end">
+<button type="button" class="btn btn-primary" (click)="nextAjaxCall(pagedata)">Primary</button>
+</div>
+</div>
+
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Library_Seq</th>
+<th>PROJECT_CODE</th>
+<th>PART_NUMBER</th>
+<th>PART_NAME</th>
+<th>CATEGORY</th>
+<th>NO_OF_DIES</th>
+<th>BASIC_COST</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr *ngFor="let item of table">
+<td>{{item.Library_Seq}}</td>
+<td>{{item.PROJECT_CODE}}</td>
+<td>{{item.PART_NUMBER}}</td>
+<td>{{item.PART_NAME}}</td>
+<td>{{item.CATEGORY}}</td>
+<td>{{item.NO_OF_DIES}}</td>
+<td>{{item.BASIC_COST}}</td>
+
+
+</tr>
+  </tbody>
+</table>

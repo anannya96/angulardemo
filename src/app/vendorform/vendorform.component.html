@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="vendorform.component.scss" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Vendor Form</div>
+
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Name</span>
+              <input
+                type="text"
+                placeholder="Name"
+                name="ads"
+                required
+                [(ngModel)]="data.name"
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input
+                type="text"
+                placeholder="Email"
+                name="adas"
+                required
+                [(ngModel)]="data.email"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="mlcs"
+                required
+                [(ngModel)]="data.pn"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Address</span>
+              <input
+                type="text"
+                placeholder="Address"
+                name="waeg"
+                required
+                [(ngModel)]="data.add"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Plant Code</span>
+              <input
+                type="text"
+                placeholder="Category"
+                name="ewaf"
+                required
+                [(ngModel)]="data.cat"
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">SPOC Email</span>
+              <input
+                type="text"
+                placeholder="SPOC Email"
+                name="egsd"
+                required
+                [(ngModel)]="data.spoc"
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">GST</span>
+              <input
+                type="text"
+                placeholder="GST Number"
+                name="efsdv"
+                required
+                [(ngModel)]="data.gst"
+              />
+            </div>
+
+            <div class="input-box">
+              <span class="details">PAN</span>
+              <input
+                type="text"
+                placeholder="PAN Number"
+                name="egsrf"
+                required
+                [(ngModel)]="data.pan"
+                (change)="change()"
+              />
+            </div>
+          </div>
+
+          <!-- <label class="form-label" for="customFile" >Default file input example</label> -->
+            <input type="file" class="form-control" id="customFile"  [(ngModel)]="filename" (change)="uploadfile($event)"/>   
+
+         
+       
+
+          <div class="button">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              value="Submit"
+              (click)="onClick()"
+              [disabled]="data.check"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

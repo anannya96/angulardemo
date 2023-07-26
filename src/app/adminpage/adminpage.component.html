@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+    <table class="table table-success table-striped">
+
+      <thead>
+        <tr>
+        <th>Plant Code</th> 
+        <th>Level</th>
+        <!-- <th style="overflow: hidden;">Vendor_Email</th> -->
+        <th>Approver UserName</th>
+        <th>Approver Name</th>
+        <th>Approver Email</th>
+        </tr>
+        </thead>
+       
+        
+        <tr *ngFor="let item of data">
+             
+       <td>{{item.plantcode}}</td> 
+        <td>{{item.levels}}</td>
+        <!-- <td style="word-wrap: break-word;">{{item.vendoremail}}</td> -->
+        <td>{{item.approverid}}</td>
+        <td>{{item.approvername}}</td>
+        <td>{{item.approveremail}}</td>
+       
+        <!-- <td><span><select class="form-select" [(ngModel)]="abc[i]" aria-label="Default select example" -->
+          <!-- (click)="actionperformed(data,abc[i],i)"> -->
+              <!-- <option>Accept</option> -->
+              <!-- <option>Reject</option> -->
+            <!-- </select></span></td> -->
+
+      
+        
+        
+        </tr>
+       
+      
+    </table>
+    </div>
+    </div>

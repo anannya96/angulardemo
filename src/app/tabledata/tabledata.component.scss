@@ -1,0 +1,29 @@
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 70rem;
+  }
+  
+  .popup-title {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .popup-message {
+    margin-bottom: 0;
+  }
+  
+  .popup-close {
+    margin-top: 20px;
+    width: 5rem;
+  }

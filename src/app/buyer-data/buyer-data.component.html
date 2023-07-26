@@ -1,0 +1,53 @@
+
+<!-- <div class="row">
+    <div class="col-12 col-md-3 col-sm-3 col-lg-3">
+  
+      <select class="form-select" aria-label="Default select example"
+      [(ngModel)]="pagedata.drop">
+          <option *ngFor="let i of data.drop">{{i.PROJECT_CODE}}</option>
+          
+        </select>
+    </div>
+   -->
+  <!-- <div class="col-12 text-end">
+  <button type="button" class="btn btn-primary" (click)="nextAjaxCall(pagedata)">Primary</button>
+  </div> -->
+  <!-- </div> -->
+  
+  <table class="table table-striped">
+  <thead>
+  <tr>
+  <th>RequestID</th>
+  <th>Vendor_Name</th>
+  <th>Vendor_Email</th>
+  <th>Vendor_Contact</th>
+  <th>Plant_Code</th>
+  <th>Vendor_Address</th>
+  <th>SPOC_Email</th>
+  <th>Vendor_GST</th>
+  <th>PAN</th>
+  <th>Status</th>
+  <th>Request_Date</th>
+  
+  </tr>
+  </thead>
+  <tbody> 
+  
+  <tr *ngFor="let item of data">
+  <td>{{item.reqid}}</td>
+  <td>{{item.vendorname}}</td>
+  <td>{{item.vendoremail}}</td>
+  <td>{{item.vendorcontact}}</td>
+  <td>{{item.vendorcategory}}</td>
+  <td>{{item.vendoraddress}}</td>
+  <td>{{item.vendorprimaryemail}}</td>
+  <td>{{item.vendorgst}}</td>
+  <td>{{item.vendorpan}}</td>
+  <td>{{item.status}}</td>
+  <td>{{item.reqdate}}</td>
+
+  
+  
+  </tr>
+    </tbody>
+  </table>

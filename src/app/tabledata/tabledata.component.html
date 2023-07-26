@@ -1,0 +1,220 @@
+<!-- <table class="table table-striped">
+    <thead>
+    <tr>
+    <th>RequestID</th>
+    <th>Vendor_Name</th>
+    <th>Vendor_Email</th>
+    <th>Vendor_Contact</th>
+    <th>Plant_Code</th>
+    <th>Vendor_Address</th>
+    <th>SPOC_Email</th>
+    <th>Vendor_GST</th>
+    <th>PAN</th>
+    <th>Status</th>
+    <th>Request_Date</th>
+    
+    </tr>
+    </thead>
+    <tbody> 
+    
+    <tr *ngFor="let item of data; let i =index">
+    <td>{{item.reqid}}</td>
+    <td>{{item.vendorname}}</td>
+    <td>{{item.vendoremail}}</td>
+    <td>{{item.vendorcontact}}</td>
+    <td>{{item.vendorcategory}}</td>
+    <td>{{item.vendoraddress}}</td>
+    <td>{{item.vendorprimaryemail}}</td>
+    <td>{{item.vendorgst}}</td>
+    <td>{{item.vendorpan}}</td>
+    <td><span><select class="form-select" [(ngModel)]="abc[i]" aria-label="Default select example"
+      (click)="actionperformed(data,abc[i],i)">
+          <option>Accept</option>
+          <option>Reject</option>
+        </select></span></td>
+    <td>{{item.reqdate}}</td>
+  
+    
+    
+    </tr>
+      </tbody>
+    </table> -->
+    <div class="card">
+    <div class="card-body">
+    <table class="table table-success table-striped">
+
+      <thead>
+        <tr>
+        <th>RequestID</th> 
+        <th>Vendor_Name</th>
+        <!-- <th style="overflow: hidden;">Vendor_Email</th> -->
+        <th>Vendor_Contact</th>
+        <th>Plant_Code</th>
+        <th>Vendor_Address</th>
+        <th>SPOC_Email</th> 
+        <th>Vendor_GST</th>
+        <th>PAN</th>
+        <!-- <th>Status</th> -->
+        <th>Request_Date</th>
+        
+        </tr>
+        </thead>
+        <tbody> 
+        
+        <tr *ngFor="let item of data" (click)="rowclick(item)">
+       <td>{{item.reqid}}</td> 
+        <td>{{item.vendorname}}</td>
+        <!-- <td style="word-wrap: break-word;">{{item.vendoremail}}</td> -->
+        <td>{{item.vendorcontact}}</td>
+        <td>{{item.vendorcategory}}</td>
+        <td>{{item.vendoraddress}}</td>
+        <td>{{item.vendorprimaryemail}}</td>
+        <td>{{item.vendorgst}}</td>
+        <td>{{item.vendorpan}}</td>
+        <!-- <td><span><select class="form-select" [(ngModel)]="abc[i]" aria-label="Default select example" -->
+          <!-- (click)="actionperformed(data,abc[i],i)"> -->
+              <!-- <option>Accept</option> -->
+              <!-- <option>Reject</option> -->
+            <!-- </select></span></td> -->
+        <td>{{item.reqdate}}</td>
+      
+        
+        
+        </tr>
+          </tbody>
+      
+    </table>
+    </div>
+    </div>
+
+    <!-- HTML FOR POP-UP BEING DISPLAYED -->
+
+    <div class="popup-container" *ngIf="showPopup">
+      <div class="popup">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Employee ID</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.reqid"
+              name="reqid"
+              disabled
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Vendor Name</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorname"
+              name="vname"
+              disabled
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Vendor_Contact</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorcontact"
+              name="vcon"
+              disabled
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Vendor Category</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorcategory"
+              name="vcat"
+              disabled
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Vendor Address</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendoraddress"
+              name="vadd"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Vendor PEmail</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorprimaryemail"
+              name="pemail"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Vendor GST</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorgst"
+              name="gst"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Vendor PAN</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.vendorpan"
+              name="pan"
+              disabled
+            />
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Vendor ReqDate</label>
+            <input
+              type="text"
+              disable
+              class="form-control"
+              [(ngModel)]="copydata.reqdate"
+              name="reqdate"
+              disabled
+            />
+          </div>
+
+        
+
+
+          </form>
+          <br>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Accpet" [(ngModel)]="acc">
+            <label class="form-check-label" for="inlineRadio1"  >Accept</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Reject" [(ngModel)]="acc">
+            <label class="form-check-label" for="inlineRadio2" >Reject</label>
+          </div>
+           <div style="margin-left: 675px">
+          <button type="button" class="btn btn-success m-1" (click)="submission()">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="close()">Close</button>
+          </div>
+          </div>
+
+          
+          </div>

@@ -1,0 +1,141 @@
+<main>
+    <div class="bg-image"></div>
+    <div
+      class="container"
+      style="
+        display: flex;
+        justify-content: center;
+        /* margin-right: 300px; */
+        align-items: center;
+        /* margin: 20%; */
+        /* margin: 20%; */
+        position: relative;
+        top: 277px;
+        right: 285px;
+      "
+    >
+      <div class="col-xl-2" style="display: -webkit-inline-box">
+        <div type="button" class="card" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+          <div class="card-body text-center">
+            <em class="fa fa-handshake-o fa-3x pt-2 pb-2 text-white"></em>
+            <h6>
+              <span class="text-white" > INSERT</span>
+            </h6>
+          </div>
+          <div class="modal" id="myModal"></div>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+          </button> -->
+          
+        <div type="button" class="card" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+          <div class="card-body text-center">
+            <em class="fa fa-handshake-o fa-3x pt-2 pb-2 text-white"></em>
+            <h6>
+              <span class="text-white"> DELETE</span>
+            </h6>
+          </div>
+        </div>
+        <div type="button" class="card">
+          <div class="card-body text-center">
+            <em class="fa fa-handshake-o fa-3x pt-2 pb-2 text-white"></em>
+            <h6>
+              <span class="text-white">UPDATE</span>
+            </h6>
+          </div>
+        </div>
+
+        <div type="button" class="card">
+            <div class="card-body text-center">
+              <em class="fa fa-handshake-o fa-3x pt-2 pb-2 text-white"></em>
+              <h6>
+                <span class="text-white">GETDATA</span>
+              </h6>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-box">
+                    <span class="details">Plant Code</span>
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      name="ads"
+                      required
+                      [(ngModel)]="data.pc"
+                      
+                    />
+                    
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Levels</span>
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          name="ads"
+                          required
+                          [(ngModel)]="data.level"
+                          
+                        />
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Approver ID</span>
+                            <input
+                              type="text"
+                              placeholder="Name"
+                              name="ads"
+                              required
+                              [(ngModel)]="data.ai"
+                              
+                            />
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Approver Email</span>
+                                <input
+                                  type="text"
+                                  placeholder="Name"
+                                  name="ads"
+                                  required
+                                  [(ngModel)]="data.ae"
+                                />
+                                </div>
+
+                                <div class="input-box">
+                                    <span class="details">Approver Name</span>
+                                    <input
+                                      type="text"
+                                      placeholder="Name"
+                                      name="ads"
+                                      required
+                                      [(ngModel)]="data.an"
+                                      
+                                    />
+                                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary"  (click)="onClick('Insert')">Insert</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    
+    
+  </main>
+  
